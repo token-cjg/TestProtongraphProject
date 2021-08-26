@@ -1,0 +1,427 @@
+{
+	"connections": [
+		{
+			"from": "GraphNode8",
+			"from_port": 0,
+			"to": "GraphNode4",
+			"to_port": 0
+		},
+		{
+			"from": "GraphNode8",
+			"from_port": 2,
+			"to": "GraphNode4",
+			"to_port": 1
+		},
+		{
+			"from": "GraphNode7",
+			"from_port": 0,
+			"to": "GraphNode4",
+			"to_port": 3
+		},
+		{
+			"from": "GraphNode10",
+			"from_port": 0,
+			"to": "GraphNode9",
+			"to_port": 0
+		},
+		{
+			"from": "GraphNode8",
+			"from_port": 1,
+			"to": "GraphNode9",
+			"to_port": 1
+		},
+		{
+			"from": "GraphNode12",
+			"from_port": 0,
+			"to": "GraphNode11",
+			"to_port": 1
+		},
+		{
+			"from": "GraphNode4",
+			"from_port": 0,
+			"to": "GraphNode14",
+			"to_port": 0
+		},
+		{
+			"from": "GraphNode3",
+			"from_port": 0,
+			"to": "GraphNode14",
+			"to_port": 1
+		},
+		{
+			"from": "GraphNode2",
+			"from_port": 0,
+			"to": "GraphNode14",
+			"to_port": 2
+		},
+		{
+			"from": "GraphNode15",
+			"from_port": 0,
+			"to": "GraphNode14",
+			"to_port": 3
+		},
+		{
+			"from": "GraphNode17",
+			"from_port": 0,
+			"to": "GraphNode14",
+			"to_port": 5
+		},
+		{
+			"from": "GraphNode14",
+			"from_port": 0,
+			"to": "GraphNode10",
+			"to_port": 0
+		},
+		{
+			"from": "GraphNode9",
+			"from_port": 0,
+			"to": "GraphNode11",
+			"to_port": 0
+		},
+		{
+			"from": "GraphNode11",
+			"from_port": 0,
+			"to": "GraphNode16",
+			"to_port": 0
+		},
+		{
+			"from": "GraphNode13",
+			"from_port": 0,
+			"to": "GraphNode12",
+			"to_port": 1
+		},
+		{
+			"from": "GraphNode8",
+			"from_port": 1,
+			"to": "GraphNode13",
+			"to_port": 1
+		}
+	],
+	"editor": {
+		"offset_x": -1132.599976,
+		"offset_y": 131.262497
+	},
+	"inspector": {
+		"displacement": 1,
+		"seed": 1,
+		"steps": 1
+	},
+	"nodes": [
+		{
+			"data": {},
+			"editor": {
+				"inputs": {
+					"0": {
+						"value": "(0, 0, 0)"
+					}
+				},
+				"offset_x": -780,
+				"offset_y": 280
+			},
+			"name": "GraphNode8",
+			"type": "break_vector"
+		},
+		{
+			"data": {},
+			"editor": {
+				"inputs": {
+					"0": {
+						"value": "Box"
+					},
+					"1": {
+						"value": "(0, 0, 0)"
+					},
+					"2": {
+						"value": "(0, 0, 0)"
+					},
+					"3": {
+						"value": "(1, 1, 1)"
+					}
+				},
+				"offset_x": -1160,
+				"offset_y": 380
+			},
+			"name": "GraphNode5",
+			"type": "input_box"
+		},
+		{
+			"data": {},
+			"editor": {
+				"inputs": {
+					"0": {
+						"value": "seed"
+					},
+					"1": {
+						"value": 1
+					},
+					"2": {
+						"value": ""
+					}
+				},
+				"offset_x": -500,
+				"offset_y": 520
+			},
+			"name": "GraphNode3",
+			"type": "inspector_scalar"
+		},
+		{
+			"data": {},
+			"editor": {
+				"inputs": {
+					"0": {
+						"value": 0
+					},
+					"1": {
+						"value": 0
+					},
+					"2": {
+						"value": 0
+					}
+				},
+				"offset_x": 400,
+				"offset_y": 140
+			},
+			"name": "GraphNode12",
+			"type": "value_vector3"
+		},
+		{
+			"data": {},
+			"editor": {
+				"inputs": {
+					"1": {
+						"value": "(0, 0, 0)"
+					},
+					"2": {
+						"value": false
+					},
+					"3": {
+						"value": false
+					}
+				},
+				"offset_x": 700,
+				"offset_y": 280
+			},
+			"name": "GraphNode11",
+			"type": "offset_transform_constant"
+		},
+		{
+			"data": {},
+			"editor": {
+				"inputs": {
+					"1": {
+						"value": 0
+					},
+					"2": {
+						"value": true
+					},
+					"3": {
+						"value": "(0, 0, 0)"
+					},
+					"4": {
+						"value": false
+					}
+				},
+				"offset_x": 400,
+				"offset_y": 280
+			},
+			"name": "GraphNode9",
+			"type": "extrude_curve_straight"
+		},
+		{
+			"data": {},
+			"editor": {
+				"inputs": {
+					"0": {
+						"value": 1
+					},
+					"1": {
+						"value": 1
+					},
+					"2": {
+						"value": "(0, 0, 0)"
+					},
+					"3": {
+						"value": "(0, 0, 0)"
+					}
+				},
+				"offset_x": -500,
+				"offset_y": 360
+			},
+			"name": "GraphNode4",
+			"type": "curve_generator_square"
+		},
+		{
+			"data": {},
+			"editor": {
+				"inputs": {
+					"0": {
+						"value": 0
+					},
+					"1": {
+						"value": 1
+					},
+					"2": {
+						"value": 0
+					}
+				},
+				"offset_x": -780,
+				"offset_y": 520
+			},
+			"name": "GraphNode7",
+			"type": "value_vector3"
+		},
+		{
+			"data": {},
+			"editor": {
+				"inputs": {
+					"0": {
+						"value": "steps"
+					},
+					"1": {
+						"value": 4
+					},
+					"2": {
+						"value": ""
+					}
+				},
+				"offset_x": -500,
+				"offset_y": 640
+			},
+			"name": "GraphNode2",
+			"type": "inspector_scalar"
+		},
+		{
+			"data": {},
+			"editor": {
+				"inputs": {},
+				"offset_x": 140,
+				"offset_y": 520
+			},
+			"name": "GraphNode10",
+			"type": "curve_tesselate_exact"
+		},
+		{
+			"data": {},
+			"editor": {
+				"inputs": {
+					"1": {
+						"value": 0
+					},
+					"2": {
+						"value": 3
+					},
+					"3": {
+						"value": 4
+					},
+					"4": {
+						"value": 50
+					},
+					"5": {
+						"value": "(0, 0, 0)"
+					},
+					"6": {
+						"value": 0.5
+					}
+				},
+				"offset_x": -200,
+				"offset_y": 520
+			},
+			"name": "GraphNode14",
+			"type": "curve_midpoint_displacement"
+		},
+		{
+			"data": {},
+			"editor": {
+				"inputs": {
+					"2": {
+						"value": false
+					}
+				},
+				"offset_x": 1020,
+				"offset_y": 380
+			},
+			"name": "GraphNode16",
+			"type": "set_material_to_node"
+		},
+		{
+			"data": {},
+			"editor": {
+				"inputs": {
+					"0": {
+						"value": 4
+					},
+					"1": {
+						"value": 0
+					},
+					"2": {
+						"value": -2
+					}
+				},
+				"offset_x": 80,
+				"offset_y": 140
+			},
+			"name": "GraphNode13",
+			"type": "math_scalar_2"
+		},
+		{
+			"data": {},
+			"editor": {
+				"inputs": {
+					"0": {
+						"value": "displacement"
+					},
+					"1": {
+						"value": 4
+					},
+					"2": {
+						"value": ""
+					}
+				},
+				"offset_x": -500,
+				"offset_y": 760
+			},
+			"name": "GraphNode15",
+			"type": "inspector_scalar"
+		},
+		{
+			"data": {},
+			"editor": {
+				"inputs": {
+					"0": {
+						"value": 0
+					},
+					"1": {
+						"value": 0
+					},
+					"2": {
+						"value": 1
+					}
+				},
+				"offset_x": -780,
+				"offset_y": 740
+			},
+			"name": "GraphNode17",
+			"type": "value_vector3"
+		},
+		{
+			"data": {},
+			"editor": {
+				"inputs": {
+					"0": {
+						"value": 0
+					},
+					"1": {
+						"value": 1
+					},
+					"2": {
+						"value": 0
+					}
+				},
+				"offset_x": 38,
+				"offset_y": 347
+			},
+			"name": "GraphNode19",
+			"type": "value_vector3"
+		}
+	]
+}

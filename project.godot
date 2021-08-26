@@ -1,0 +1,193 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Spatial",
+"class": "ConceptBoxInput",
+"language": "GDScript",
+"path": "res://scripts/box_input.gd"
+}, {
+"base": "Reference",
+"class": "ConceptGraph",
+"language": "GDScript",
+"path": "res://addons/concept_graph/src/core/concept_graph.gd"
+}, {
+"base": "Node2D",
+"class": "ConceptGraph2D",
+"language": "GDScript",
+"path": "res://addons/concept_graph/src/core/concept_graph_2d.gd"
+}, {
+"base": "Spatial",
+"class": "ConceptGraph3D",
+"language": "GDScript",
+"path": "res://addons/concept_graph/src/core/concept_graph_3d.gd"
+}, {
+"base": "Reference",
+"class": "ConceptGraphCurveInput",
+"language": "GDScript",
+"path": "res://addons/concept_graph/src/editor/nodes/curve_input.gd"
+}, {
+"base": "Reference",
+"class": "ConceptGraphCurveUtil",
+"language": "GDScript",
+"path": "res://addons/concept_graph/src/common/curve_util.gd"
+}, {
+"base": "Reference",
+"class": "ConceptGraphDataType",
+"language": "GDScript",
+"path": "res://addons/concept_graph/src/data_structures/data_types.gd"
+}, {
+"base": "Reference",
+"class": "ConceptGraphEditorUtil",
+"language": "GDScript",
+"path": "res://addons/concept_graph/src/common/editor_util.gd"
+}, {
+"base": "Reference",
+"class": "ConceptGraphEditorView",
+"language": "GDScript",
+"path": "res://addons/concept_graph/src/editor/gui/editor_view.gd"
+}, {
+"base": "Reference",
+"class": "ConceptGraphHeightmap",
+"language": "GDScript",
+"path": "res://addons/concept_graph/src/data_structures/heightmap.gd"
+}, {
+"base": "Reference",
+"class": "ConceptGraphInputManager",
+"language": "GDScript",
+"path": "res://addons/concept_graph/src/editor/nodes/input_manager.gd"
+}, {
+"base": "Node",
+"class": "ConceptGraphNodePool",
+"language": "GDScript",
+"path": "res://addons/concept_graph/src/core/node_pool.gd"
+}, {
+"base": "Reference",
+"class": "ConceptGraphNodeUtil",
+"language": "GDScript",
+"path": "res://addons/concept_graph/src/common/node_util.gd"
+}, {
+"base": "Reference",
+"class": "ConceptGraphNoise",
+"language": "GDScript",
+"path": "res://addons/concept_graph/src/data_structures/noise.gd"
+}, {
+"base": "Reference",
+"class": "ConceptGraphNoiseBlend",
+"language": "GDScript",
+"path": "res://addons/concept_graph/src/data_structures/noise_blend.gd"
+}, {
+"base": "Reference",
+"class": "ConceptGraphNoiseSimplex",
+"language": "GDScript",
+"path": "res://addons/concept_graph/src/data_structures/noise_simplex.gd"
+}, {
+"base": "Reference",
+"class": "ConceptGraphSettings",
+"language": "GDScript",
+"path": "res://addons/concept_graph/src/core/project_settings.gd"
+}, {
+"base": "Reference",
+"class": "ConceptGraphTemplate",
+"language": "GDScript",
+"path": "res://addons/concept_graph/src/core/template.gd"
+}, {
+"base": "Reference",
+"class": "ConceptGraphThreadPool",
+"language": "GDScript",
+"path": "res://addons/concept_graph/src/core/thread_pool.gd"
+}, {
+"base": "Reference",
+"class": "ConceptGraphVectorUtil",
+"language": "GDScript",
+"path": "res://addons/concept_graph/src/common/vector_util.gd"
+}, {
+"base": "Reference",
+"class": "ConceptNode",
+"language": "GDScript",
+"path": "res://addons/concept_graph/src/core/concept_node.gd"
+}, {
+"base": "Reference",
+"class": "ConceptNodeLibrary",
+"language": "GDScript",
+"path": "res://addons/concept_graph/src/core/node_library.gd"
+}, {
+"base": "Spatial",
+"class": "ConceptNodeVectorCurve",
+"language": "GDScript",
+"path": "res://addons/concept_graph/src/data_structures/vector_curve_3d.gd"
+}, {
+"base": "Spatial",
+"class": "ConceptNodeVectorCurve2D",
+"language": "GDScript",
+"path": "res://addons/concept_graph/src/data_structures/vector_curve_2d.gd"
+}, {
+"base": "Reference",
+"class": "JSONBeautifier",
+"language": "GDScript",
+"path": "res://addons/concept_graph/src/thirdparty/json_beautifier/json_beautifier.gd"
+}, {
+"base": "Object",
+"class": "NodeUtils",
+"language": "GDScript",
+"path": "res://addons/concept_graph/src/common/node_utils.gd"
+}, {
+"base": "Reference",
+"class": "PoolVectorUtil",
+"language": "GDScript",
+"path": "res://addons/concept_graph/src/common/pool_vector_util.gd"
+} ]
+_global_script_class_icons={
+"ConceptBoxInput": "",
+"ConceptGraph": "",
+"ConceptGraph2D": "",
+"ConceptGraph3D": "",
+"ConceptGraphCurveInput": "",
+"ConceptGraphCurveUtil": "",
+"ConceptGraphDataType": "",
+"ConceptGraphEditorUtil": "",
+"ConceptGraphEditorView": "",
+"ConceptGraphHeightmap": "",
+"ConceptGraphInputManager": "",
+"ConceptGraphNodePool": "",
+"ConceptGraphNodeUtil": "",
+"ConceptGraphNoise": "",
+"ConceptGraphNoiseBlend": "",
+"ConceptGraphNoiseSimplex": "",
+"ConceptGraphSettings": "",
+"ConceptGraphTemplate": "",
+"ConceptGraphThreadPool": "",
+"ConceptGraphVectorUtil": "",
+"ConceptNode": "",
+"ConceptNodeLibrary": "",
+"ConceptNodeVectorCurve": "",
+"ConceptNodeVectorCurve2D": "",
+"JSONBeautifier": "",
+"NodeUtils": "",
+"PoolVectorUtil": ""
+}
+
+[application]
+
+config/name="TestProtongraph"
+run/main_scene="res://scenes/TestProtongraph.tscn"
+config/icon="res://icon.png"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/sync-godot/plugin.cfg" )
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

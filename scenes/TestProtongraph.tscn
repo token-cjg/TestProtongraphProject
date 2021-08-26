@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/sync-godot/src/proton_graph.gd" type="Script" id=1]
+[ext_resource path="res://addons/sync-godot/src/input_manager.gd" type="Script" id=2]
+
+[node name="TestProtongraph" type="Spatial"]
+
+[node name="ProtonGraph" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.50341, 0 )
+script = ExtResource( 1 )
+template_file = "res://templates/ground_v1.tpgn"
+"Remote Status" = null
+Template/seed = 1
+Template/steps = 4
+Template/displacement = 4
+
+[node name="Inputs" type="Spatial" parent="ProtonGraph"]
+script = ExtResource( 2 )
+
+[node name="Outputs" type="Spatial" parent="ProtonGraph"]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -4.37114e-08, 0.34202, -0.939693, 0, 0.939693, 0.34202, 1, 1.49502e-08, -4.10753e-08, -19.2975, 10.8164, 0 )
+current = true
