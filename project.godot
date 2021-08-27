@@ -9,7 +9,7 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Reference",
+"base": "Spatial",
 "class": "ConceptBoxInput",
 "language": "GDScript",
 "path": "res://addons/concept_graph/src/editor/nodes/box_input.gd"
@@ -188,7 +188,7 @@ config/icon="res://icon.png"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/sync-godot/plugin.cfg" )
+enabled=PoolStringArray(  )
 
 [physics]
 
