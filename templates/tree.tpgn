@@ -19,12 +19,6 @@
 			"to_port": 0
 		},
 		{
-			"from": "GraphNode2",
-			"from_port": 0,
-			"to": "GraphNode12",
-			"to_port": 0
-		},
-		{
 			"from": "GraphNode12",
 			"from_port": 0,
 			"to": "GraphNode13",
@@ -223,12 +217,6 @@
 			"to_port": 2
 		},
 		{
-			"from": "GraphNode47",
-			"from_port": 0,
-			"to": "GraphNode46",
-			"to_port": 0
-		},
-		{
 			"from": "GraphNode45",
 			"from_port": 0,
 			"to": "GraphNode48",
@@ -295,12 +283,6 @@
 			"to_port": 0
 		},
 		{
-			"from": "GraphNode68",
-			"from_port": 0,
-			"to": "GraphNode67",
-			"to_port": 1
-		},
-		{
 			"from": "GraphNode28",
 			"from_port": 0,
 			"to": "GraphNode7",
@@ -310,12 +292,6 @@
 			"from": "GraphNode10",
 			"from_port": 0,
 			"to": "GraphNode32",
-			"to_port": 0
-		},
-		{
-			"from": "GraphNode46",
-			"from_port": 0,
-			"to": "GraphNode60",
 			"to_port": 0
 		},
 		{
@@ -334,12 +310,6 @@
 			"from": "GraphNode34",
 			"from_port": 0,
 			"to": "GraphNode45",
-			"to_port": 0
-		},
-		{
-			"from": "GraphNode67",
-			"from_port": 0,
-			"to": "GraphNode",
 			"to_port": 0
 		},
 		{
@@ -367,17 +337,80 @@
 			"to_port": 0
 		}
 	],
+	"editor": {
+		"offset_x": -2915.249268,
+		"offset_y": -168.550323
+	},
+	"inspector": {
+		"branches length": 1,
+		"branches profile": {
+			"parameters": {
+				"max": 1,
+				"min": 0,
+				"res": 100
+			},
+			"points": [
+				{
+					"lm": 0,
+					"lt": 0,
+					"pos_x": 0,
+					"pos_y": 0,
+					"rm": 0,
+					"rt": 0
+				},
+				{
+					"lm": 0,
+					"lt": 0,
+					"pos_x": 1,
+					"pos_y": 1,
+					"rm": 0,
+					"rt": 0
+				}
+			]
+		},
+		"branches radius": 1,
+		"rotation": 1,
+		"seed": 1,
+		"sub branches length": 1,
+		"sub branches radius": 1,
+		"trunk profile": {
+			"parameters": {
+				"max": 1,
+				"min": 0,
+				"res": 100
+			},
+			"points": [
+				{
+					"lm": 0,
+					"lt": 0,
+					"pos_x": 0,
+					"pos_y": 0,
+					"rm": 0,
+					"rt": 0
+				},
+				{
+					"lm": 0,
+					"lt": 0,
+					"pos_x": 1,
+					"pos_y": 1,
+					"rm": 0,
+					"rt": 0
+				}
+			]
+		},
+		"trunk radius": 1
+	},
 	"nodes": [
 		{
 			"data": {
 				"comment_text": "Set trunk and branches default material"
 			},
 			"editor": {
+				"inputs": {},
 				"offset_x": 1900,
 				"offset_y": 180,
-				"rect_x": 578,
-				"rect_y": 223.000366,
-				"slots": {}
+				"rect_x": 577.999512,
+				"rect_y": 222.999359
 			},
 			"name": "GraphNode69",
 			"type": "comment"
@@ -387,11 +420,11 @@
 				"comment_text": "Branches mesh generation"
 			},
 			"editor": {
+				"inputs": {},
 				"offset_x": -1200,
 				"offset_y": 100,
-				"rect_x": 1336,
-				"rect_y": 337.000366,
-				"slots": {}
+				"rect_x": 1336.002686,
+				"rect_y": 336.99939
 			},
 			"name": "GraphNode62",
 			"type": "comment"
@@ -401,11 +434,11 @@
 				"comment_text": "Merge branches, subbranches and trunk as a single mesh"
 			},
 			"editor": {
+				"inputs": {},
 				"offset_x": 1740,
 				"offset_y": -120,
 				"rect_x": 469.160156,
-				"rect_y": 256.880371,
-				"slots": {}
+				"rect_y": 256.880127
 			},
 			"name": "GraphNode64",
 			"type": "comment"
@@ -415,11 +448,11 @@
 				"comment_text": "Leaves generation"
 			},
 			"editor": {
+				"inputs": {},
 				"offset_x": 960,
 				"offset_y": -980,
-				"rect_x": 1360.456543,
-				"rect_y": 680.416504,
-				"slots": {}
+				"rect_x": 1360.455322,
+				"rect_y": 680.416504
 			},
 			"name": "GraphNode66",
 			"type": "comment"
@@ -429,11 +462,11 @@
 				"comment_text": "Sub branches mesh generation"
 			},
 			"editor": {
+				"inputs": {},
 				"offset_x": 320,
 				"offset_y": 100,
-				"rect_x": 1204.375977,
-				"rect_y": 363.728149,
-				"slots": {}
+				"rect_x": 1204.375488,
+				"rect_y": 363.727539
 			},
 			"name": "GraphNode65",
 			"type": "comment"
@@ -443,11 +476,11 @@
 				"comment_text": "Sub-branches shape generation"
 			},
 			"editor": {
+				"inputs": {},
 				"offset_x": -400,
 				"offset_y": -680,
-				"rect_x": 1240.232422,
-				"rect_y": 559.080444,
-				"slots": {}
+				"rect_x": 1240.235107,
+				"rect_y": 559.080444
 			},
 			"name": "GraphNode63",
 			"type": "comment"
@@ -457,11 +490,11 @@
 				"comment_text": "Branches shape generation"
 			},
 			"editor": {
+				"inputs": {},
 				"offset_x": -2020,
 				"offset_y": -620,
-				"rect_x": 1475.424561,
-				"rect_y": 665.864502,
-				"slots": {}
+				"rect_x": 1475.424805,
+				"rect_y": 665.864502
 			},
 			"name": "GraphNode61",
 			"type": "comment"
@@ -471,11 +504,11 @@
 				"comment_text": "Trunk generation"
 			},
 			"editor": {
+				"inputs": {},
 				"offset_x": -3620,
 				"offset_y": -400,
 				"rect_x": 1479,
-				"rect_y": 784.000366,
-				"slots": {}
+				"rect_y": 784
 			},
 			"name": "GraphNode53",
 			"type": "comment"
@@ -483,14 +516,22 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"1": {
+						"value": 0.5
+					},
+					"2": {
+						"value": 0.3
+					},
+					"3": {
+						"value": 0.7
+					},
+					"4": {
+						"value": true
+					}
+				},
 				"offset_x": -1760,
-				"offset_y": -300,
-				"slots": {
-					"1": 0.5,
-					"2": 0.3,
-					"3": 0.7,
-					"4": true
-				}
+				"offset_y": -300
 			},
 			"name": "GraphNode3",
 			"type": "curve_sample_points_constant"
@@ -498,25 +539,19 @@
 		{
 			"data": {},
 			"editor": {
-				"offset_x": -3320,
-				"offset_y": -20,
-				"slots": {
-					"0": 5,
-					"1": 1
-				}
-			},
-			"name": "GraphNode17",
-			"type": "curve_generator_polygon"
-		},
-		{
-			"data": {},
-			"editor": {
+				"inputs": {
+					"0": {
+						"value": "Sub branches radius"
+					},
+					"1": {
+						"value": 0.1
+					},
+					"2": {
+						"value": ""
+					}
+				},
 				"offset_x": 360,
-				"offset_y": 180,
-				"slots": {
-					"0": "Sub branches radius",
-					"1": 0.1
-				}
+				"offset_y": 180
 			},
 			"name": "GraphNode39",
 			"type": "inspector_scalar"
@@ -524,12 +559,22 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"1": {
+						"value": "(0, 0, 0)"
+					},
+					"2": {
+						"value": 0
+					},
+					"3": {
+						"value": true
+					},
+					"4": {
+						"value": "(0, 0, 0)"
+					}
+				},
 				"offset_x": -1440,
-				"offset_y": -300,
-				"slots": {
-					"2": 0,
-					"3": true
-				}
+				"offset_y": -300
 			},
 			"name": "GraphNode7",
 			"type": "rotate_transforms_random"
@@ -537,12 +582,22 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"1": {
+						"value": "(0, 0, 0)"
+					},
+					"2": {
+						"value": 0
+					},
+					"3": {
+						"value": true
+					},
+					"4": {
+						"value": "(0, 0, 0)"
+					}
+				},
 				"offset_x": -80,
-				"offset_y": -320,
-				"slots": {
-					"2": 0,
-					"3": true
-				}
+				"offset_y": -320
 			},
 			"name": "GraphNode42",
 			"type": "rotate_transforms_random"
@@ -550,12 +605,19 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"0": {
+						"value": "Seed"
+					},
+					"1": {
+						"value": 0
+					},
+					"2": {
+						"value": ""
+					}
+				},
 				"offset_x": -360,
-				"offset_y": -440,
-				"slots": {
-					"0": "Seed",
-					"1": 0
-				}
+				"offset_y": -440
 			},
 			"name": "GraphNode44",
 			"type": "inspector_scalar"
@@ -563,13 +625,19 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"0": {
+						"value": 0
+					},
+					"1": {
+						"value": 1
+					},
+					"2": {
+						"value": 1
+					}
+				},
 				"offset_x": -80,
-				"offset_y": -460,
-				"slots": {
-					"0": 0,
-					"1": 1,
-					"2": 1
-				}
+				"offset_y": -460
 			},
 			"name": "GraphNode33",
 			"type": "value_vector3"
@@ -577,12 +645,19 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"0": {
+						"value": "sub branches length"
+					},
+					"1": {
+						"value": 1
+					},
+					"2": {
+						"value": ""
+					}
+				},
 				"offset_x": -80,
-				"offset_y": -580,
-				"slots": {
-					"0": "sub branches length",
-					"1": 1
-				}
+				"offset_y": -580
 			},
 			"name": "GraphNode40",
 			"type": "inspector_scalar"
@@ -590,12 +665,19 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"0": {
+						"value": 1
+					},
+					"1": {
+						"value": false
+					},
+					"2": {
+						"value": "(0, 0, 0)"
+					}
+				},
 				"offset_x": 240,
-				"offset_y": -400,
-				"slots": {
-					"0": 1,
-					"1": false
-				}
+				"offset_y": -400
 			},
 			"name": "GraphNode31",
 			"type": "curve_generator_line_mutli"
@@ -603,12 +685,19 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"0": {
+						"value": "Seed"
+					},
+					"1": {
+						"value": 0
+					},
+					"2": {
+						"value": ""
+					}
+				},
 				"offset_x": 240,
-				"offset_y": -520,
-				"slots": {
-					"0": "Seed",
-					"1": 0
-				}
+				"offset_y": -520
 			},
 			"name": "GraphNode35",
 			"type": "inspector_scalar"
@@ -616,12 +705,22 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"0": {
+						"value": 3
+					},
+					"1": {
+						"value": 0.1
+					},
+					"2": {
+						"value": "(0, 0, 0)"
+					},
+					"3": {
+						"value": "(0, 0, 0)"
+					}
+				},
 				"offset_x": 680,
-				"offset_y": 180,
-				"slots": {
-					"0": 3,
-					"1": 0.1
-				}
+				"offset_y": 180
 			},
 			"name": "GraphNode38",
 			"type": "curve_generator_polygon"
@@ -629,11 +728,16 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"0": {
+						"value": "Branches profile"
+					},
+					"2": {
+						"value": ""
+					}
+				},
 				"offset_x": -620,
-				"offset_y": 280,
-				"slots": {
-					"0": "Branches profile"
-				}
+				"offset_y": 280
 			},
 			"name": "GraphNode25",
 			"type": "inspector_curve_2d"
@@ -641,12 +745,22 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"1": {
+						"value": "(0, 0, 0)"
+					},
+					"2": {
+						"value": 0
+					},
+					"3": {
+						"value": true
+					},
+					"4": {
+						"value": "(0, 0, 0)"
+					}
+				},
 				"offset_x": 1280,
-				"offset_y": -740,
-				"slots": {
-					"2": 0,
-					"3": true
-				}
+				"offset_y": -740
 			},
 			"name": "GraphNode48",
 			"type": "rotate_transforms_random"
@@ -654,13 +768,19 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"0": {
+						"value": 0
+					},
+					"1": {
+						"value": 0
+					},
+					"2": {
+						"value": 0
+					}
+				},
 				"offset_x": 1560,
-				"offset_y": -580,
-				"slots": {
-					"0": 0,
-					"1": 0,
-					"2": 0
-				}
+				"offset_y": -580
 			},
 			"name": "GraphNode58",
 			"type": "value_vector3"
@@ -668,11 +788,13 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"0": {
+						"value": 3.5
+					}
+				},
 				"offset_x": 1340,
-				"offset_y": -540,
-				"slots": {
-					"0": 3.5
-				}
+				"offset_y": -540
 			},
 			"name": "GraphNode59",
 			"type": "value_scalar"
@@ -680,9 +802,13 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"2": {
+						"value": "(0, 0, 0)"
+					}
+				},
 				"offset_x": 1860,
-				"offset_y": -740,
-				"slots": {}
+				"offset_y": -740
 			},
 			"name": "GraphNode54",
 			"type": "scale_transforms_from_noise"
@@ -690,9 +816,9 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {},
 				"offset_x": 2100,
-				"offset_y": -800,
-				"slots": {}
+				"offset_y": -800
 			},
 			"name": "GraphNode46",
 			"type": "make_multimesh"
@@ -700,22 +826,16 @@
 		{
 			"data": {},
 			"editor": {
-				"offset_x": 2360,
-				"offset_y": -800,
-				"slots": {}
-			},
-			"name": "GraphNode60",
-			"type": "final_output"
-		},
-		{
-			"data": {},
-			"editor": {
+				"inputs": {
+					"1": {
+						"value": 1.5
+					},
+					"2": {
+						"value": false
+					}
+				},
 				"offset_x": -3400,
-				"offset_y": -300,
-				"slots": {
-					"1": 1.5,
-					"2": false
-				}
+				"offset_y": -300
 			},
 			"name": "GraphNode12",
 			"type": "curve_tesselate_regular"
@@ -723,24 +843,19 @@
 		{
 			"data": {},
 			"editor": {
-				"offset_x": -3600,
-				"offset_y": -300,
-				"slots": {
-					"0": "Path"
-				}
-			},
-			"name": "GraphNode2",
-			"type": "nodetree_input_curve"
-		},
-		{
-			"data": {},
-			"editor": {
+				"inputs": {
+					"0": {
+						"value": "Seed"
+					},
+					"1": {
+						"value": 0
+					},
+					"2": {
+						"value": ""
+					}
+				},
 				"offset_x": -3100,
-				"offset_y": -200,
-				"slots": {
-					"0": "Seed",
-					"1": 0
-				}
+				"offset_y": -200
 			},
 			"name": "GraphNode14",
 			"type": "inspector_scalar"
@@ -748,28 +863,28 @@
 		{
 			"data": {},
 			"editor": {
-				"offset_x": -3600,
-				"offset_y": -20,
-				"slots": {
-					"0": "Trunk radius",
-					"1": 1
-				}
-			},
-			"name": "GraphNode20",
-			"type": "inspector_scalar"
-		},
-		{
-			"data": {},
-			"editor": {
+				"inputs": {
+					"1": {
+						"value": 0
+					},
+					"2": {
+						"value": 1
+					},
+					"3": {
+						"value": 2
+					},
+					"4": {
+						"value": 50
+					},
+					"5": {
+						"value": "(0, 0, 0)"
+					},
+					"6": {
+						"value": 0.1
+					}
+				},
 				"offset_x": -3020,
-				"offset_y": -20,
-				"slots": {
-					"1": 0,
-					"2": 1,
-					"3": 2,
-					"4": 50,
-					"6": 0.1
-				}
+				"offset_y": -20
 			},
 			"name": "GraphNode18",
 			"type": "curve_midpoint_displacement"
@@ -777,9 +892,9 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {},
 				"offset_x": -2680,
-				"offset_y": -20,
-				"slots": {}
+				"offset_y": -20
 			},
 			"name": "GraphNode23",
 			"type": "curve_tesselate_exact"
@@ -787,11 +902,16 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"0": {
+						"value": "Trunk profile"
+					},
+					"2": {
+						"value": ""
+					}
+				},
 				"offset_x": -2680,
-				"offset_y": 80,
-				"slots": {
-					"0": "Trunk profile"
-				}
+				"offset_y": 80
 			},
 			"name": "GraphNode24",
 			"type": "inspector_curve_2d"
@@ -799,14 +919,19 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"3": {
+						"value": 0.4
+					},
+					"4": {
+						"value": "(1, 1)"
+					},
+					"5": {
+						"value": true
+					}
+				},
 				"offset_x": -2400,
-				"offset_y": -20,
-				"slots": {
-					"3": 0.4,
-					"4": true,
-					"5": 1,
-					"6": 1
-				}
+				"offset_y": -20
 			},
 			"name": "GraphNode16",
 			"type": "extrude_bevel_along_path"
@@ -814,36 +939,9 @@
 		{
 			"data": {},
 			"editor": {
-				"offset_x": -3320,
-				"offset_y": 100,
-				"slots": {
-					"0": "Seed",
-					"1": 0
-				}
-			},
-			"name": "GraphNode19",
-			"type": "inspector_scalar"
-		},
-		{
-			"data": {},
-			"editor": {
-				"offset_x": -3320,
-				"offset_y": 220,
-				"slots": {
-					"0": 0,
-					"1": 0,
-					"2": 1
-				}
-			},
-			"name": "GraphNode29",
-			"type": "value_vector3"
-		},
-		{
-			"data": {},
-			"editor": {
+				"inputs": {},
 				"offset_x": -3100,
-				"offset_y": -300,
-				"slots": {}
+				"offset_y": -300
 			},
 			"name": "GraphNode13",
 			"type": "convert_points_to_curve"
@@ -851,9 +949,9 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {},
 				"offset_x": -600,
-				"offset_y": 180,
-				"slots": {}
+				"offset_y": 180
 			},
 			"name": "GraphNode27",
 			"type": "curve_tesselate_exact"
@@ -861,12 +959,19 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"0": {
+						"value": "Seed"
+					},
+					"1": {
+						"value": 0
+					},
+					"2": {
+						"value": ""
+					}
+				},
 				"offset_x": -1760,
-				"offset_y": -100,
-				"slots": {
-					"0": "Seed",
-					"1": 0
-				}
+				"offset_y": -100
 			},
 			"name": "GraphNode28",
 			"type": "inspector_scalar"
@@ -874,13 +979,19 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"0": {
+						"value": 0
+					},
+					"1": {
+						"value": 1
+					},
+					"2": {
+						"value": -0.7
+					}
+				},
 				"offset_x": -1440,
-				"offset_y": -440,
-				"slots": {
-					"0": 0,
-					"1": 1,
-					"2": -0.7
-				}
+				"offset_y": -440
 			},
 			"name": "GraphNode6",
 			"type": "value_vector3"
@@ -888,12 +999,19 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"0": {
+						"value": "Rotation"
+					},
+					"1": {
+						"value": 360
+					},
+					"2": {
+						"value": ""
+					}
+				},
 				"offset_x": -2000,
-				"offset_y": -440,
-				"slots": {
-					"0": "Rotation",
-					"1": 360
-				}
+				"offset_y": -440
 			},
 			"name": "GraphNode9",
 			"type": "inspector_scalar"
@@ -901,13 +1019,19 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"0": {
+						"value": 10
+					},
+					"1": {
+						"value": 10
+					},
+					"2": {
+						"value": 360
+					}
+				},
 				"offset_x": -1760,
-				"offset_y": -440,
-				"slots": {
-					"0": 10,
-					"1": 10,
-					"2": 360
-				}
+				"offset_y": -440
 			},
 			"name": "GraphNode8",
 			"type": "value_vector3"
@@ -915,12 +1039,19 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"0": {
+						"value": 5
+					},
+					"1": {
+						"value": false
+					},
+					"2": {
+						"value": "(0, 0, 0)"
+					}
+				},
 				"offset_x": -1180,
-				"offset_y": -380,
-				"slots": {
-					"0": 5,
-					"1": false
-				}
+				"offset_y": -380
 			},
 			"name": "GraphNode4",
 			"type": "curve_generator_line_mutli"
@@ -928,12 +1059,19 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"0": {
+						"value": "Branches length"
+					},
+					"1": {
+						"value": 3
+					},
+					"2": {
+						"value": ""
+					}
+				},
 				"offset_x": -1480,
-				"offset_y": -560,
-				"slots": {
-					"0": "Branches length",
-					"1": 3
-				}
+				"offset_y": -560
 			},
 			"name": "GraphNode30",
 			"type": "inspector_scalar"
@@ -941,12 +1079,19 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"0": {
+						"value": "Seed"
+					},
+					"1": {
+						"value": 0
+					},
+					"2": {
+						"value": ""
+					}
+				},
 				"offset_x": -1160,
-				"offset_y": -500,
-				"slots": {
-					"0": "Seed",
-					"1": 0
-				}
+				"offset_y": -500
 			},
 			"name": "GraphNode15",
 			"type": "inspector_scalar"
@@ -954,15 +1099,28 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"1": {
+						"value": 0
+					},
+					"2": {
+						"value": 3
+					},
+					"3": {
+						"value": 3
+					},
+					"4": {
+						"value": 5
+					},
+					"5": {
+						"value": "(0, 0, 0)"
+					},
+					"6": {
+						"value": 0.3
+					}
+				},
 				"offset_x": -900,
-				"offset_y": -380,
-				"slots": {
-					"1": 0,
-					"2": 3,
-					"3": 3,
-					"4": 5,
-					"6": 0.3
-				}
+				"offset_y": -380
 			},
 			"name": "GraphNode10",
 			"type": "curve_midpoint_displacement"
@@ -970,12 +1128,22 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"0": {
+						"value": 3
+					},
+					"1": {
+						"value": 1
+					},
+					"2": {
+						"value": "(0, 0, 0)"
+					},
+					"3": {
+						"value": "(0, 0, 0)"
+					}
+				},
 				"offset_x": -880,
-				"offset_y": 180,
-				"slots": {
-					"0": 3,
-					"1": 1
-				}
+				"offset_y": 180
 			},
 			"name": "GraphNode22",
 			"type": "curve_generator_polygon"
@@ -983,15 +1151,25 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"0": {
+						"value": 24
+					},
+					"1": {
+						"value": 3
+					},
+					"2": {
+						"value": 4
+					},
+					"3": {
+						"value": 1
+					},
+					"4": {
+						"value": 2
+					}
+				},
 				"offset_x": 1520,
-				"offset_y": -900,
-				"slots": {
-					"0": 24,
-					"1": 3,
-					"2": 4,
-					"3": 1,
-					"4": 2
-				}
+				"offset_y": -900
 			},
 			"name": "GraphNode55",
 			"type": "simplex_noise"
@@ -999,14 +1177,22 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"1": {
+						"value": 0.75
+					},
+					"2": {
+						"value": 0.1
+					},
+					"3": {
+						"value": 0.7
+					},
+					"4": {
+						"value": true
+					}
+				},
 				"offset_x": -360,
-				"offset_y": -320,
-				"slots": {
-					"1": 0.75,
-					"2": 0.1,
-					"3": 0.7,
-					"4": true
-				}
+				"offset_y": -320
 			},
 			"name": "GraphNode32",
 			"type": "curve_sample_points_constant"
@@ -1014,13 +1200,19 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"0": {
+						"value": 10
+					},
+					"1": {
+						"value": 360
+					},
+					"2": {
+						"value": 10
+					}
+				},
 				"offset_x": -360,
-				"offset_y": -580,
-				"slots": {
-					"0": 10,
-					"1": 360,
-					"2": 10
-				}
+				"offset_y": -580
 			},
 			"name": "GraphNode43",
 			"type": "value_vector3"
@@ -1028,9 +1220,9 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {},
 				"offset_x": 940,
-				"offset_y": 180,
-				"slots": {}
+				"offset_y": 180
 			},
 			"name": "GraphNode41",
 			"type": "curve_tesselate_exact"
@@ -1038,11 +1230,16 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"0": {
+						"value": "Branches profile"
+					},
+					"2": {
+						"value": ""
+					}
+				},
 				"offset_x": 920,
-				"offset_y": 280,
-				"slots": {
-					"0": "Branches profile"
-				}
+				"offset_y": 280
 			},
 			"name": "GraphNode37",
 			"type": "inspector_curve_2d"
@@ -1050,14 +1247,19 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"3": {
+						"value": 0.4
+					},
+					"4": {
+						"value": "(1, 1)"
+					},
+					"5": {
+						"value": true
+					}
+				},
 				"offset_x": 1220,
-				"offset_y": 180,
-				"slots": {
-					"3": 0.4,
-					"4": false,
-					"5": 1,
-					"6": 1
-				}
+				"offset_y": 180
 			},
 			"name": "GraphNode36",
 			"type": "extrude_bevel_along_path"
@@ -1065,11 +1267,13 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"2": {
+						"value": false
+					}
+				},
 				"offset_x": 2220,
-				"offset_y": 260,
-				"slots": {
-					"2": false
-				}
+				"offset_y": 260
 			},
 			"name": "GraphNode67",
 			"type": "set_material_to_node"
@@ -1077,34 +1281,19 @@
 		{
 			"data": {},
 			"editor": {
-				"offset_x": 1940,
-				"offset_y": 260,
-				"slots": {
-					"0": "trunk material"
-				}
-			},
-			"name": "GraphNode68",
-			"type": "inspector_spatial_material"
-		},
-		{
-			"data": {},
-			"editor": {
-				"offset_x": 2580,
-				"offset_y": 260,
-				"slots": {}
-			},
-			"name": "GraphNode",
-			"type": "final_output"
-		},
-		{
-			"data": {},
-			"editor": {
+				"inputs": {
+					"0": {
+						"value": "Branches radius"
+					},
+					"1": {
+						"value": 0.1
+					},
+					"2": {
+						"value": ""
+					}
+				},
 				"offset_x": -1180,
-				"offset_y": 180,
-				"slots": {
-					"0": "Branches radius",
-					"1": 0.1
-				}
+				"offset_y": 180
 			},
 			"name": "GraphNode21",
 			"type": "inspector_scalar"
@@ -1112,28 +1301,28 @@
 		{
 			"data": {},
 			"editor": {
-				"offset_x": 1860,
-				"offset_y": -860,
-				"slots": {
-					"0": "Leaves",
-					"1": false
-				}
-			},
-			"name": "GraphNode47",
-			"type": "input_generic"
-		},
-		{
-			"data": {},
-			"editor": {
+				"inputs": {
+					"1": {
+						"value": 0
+					},
+					"2": {
+						"value": 2
+					},
+					"3": {
+						"value": 2
+					},
+					"4": {
+						"value": 50
+					},
+					"5": {
+						"value": "(0, 0, 0)"
+					},
+					"6": {
+						"value": 0.4
+					}
+				},
 				"offset_x": -2840,
-				"offset_y": -300,
-				"slots": {
-					"1": 0,
-					"2": 2,
-					"3": 2,
-					"4": 50,
-					"6": 0.4
-				}
+				"offset_y": -300
 			},
 			"name": "GraphNode11",
 			"type": "curve_midpoint_displacement"
@@ -1141,14 +1330,19 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"3": {
+						"value": 0.6
+					},
+					"4": {
+						"value": "(1, 1)"
+					},
+					"5": {
+						"value": true
+					}
+				},
 				"offset_x": -340,
-				"offset_y": 180,
-				"slots": {
-					"3": 0.6,
-					"4": true,
-					"5": 1,
-					"6": 1
-				}
+				"offset_y": 180
 			},
 			"name": "GraphNode26",
 			"type": "extrude_bevel_along_path"
@@ -1156,15 +1350,28 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"1": {
+						"value": 0
+					},
+					"2": {
+						"value": 4
+					},
+					"3": {
+						"value": 6
+					},
+					"4": {
+						"value": 5
+					},
+					"5": {
+						"value": "(0, 0, 0)"
+					},
+					"6": {
+						"value": 0.2
+					}
+				},
 				"offset_x": 520,
-				"offset_y": -400,
-				"slots": {
-					"1": 0,
-					"2": 4,
-					"3": 6,
-					"4": 5,
-					"6": 0.2
-				}
+				"offset_y": -400
 			},
 			"name": "GraphNode34",
 			"type": "curve_midpoint_displacement"
@@ -1172,12 +1379,19 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"0": {
+						"value": "Seed"
+					},
+					"1": {
+						"value": 0
+					},
+					"2": {
+						"value": ""
+					}
+				},
 				"offset_x": 1000,
-				"offset_y": -900,
-				"slots": {
-					"0": "Seed",
-					"1": 0
-				}
+				"offset_y": -900
 			},
 			"name": "GraphNode50",
 			"type": "inspector_scalar"
@@ -1185,14 +1399,22 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"1": {
+						"value": 0.55
+					},
+					"2": {
+						"value": 0.45
+					},
+					"3": {
+						"value": 1
+					},
+					"4": {
+						"value": true
+					}
+				},
 				"offset_x": 1000,
-				"offset_y": -760,
-				"slots": {
-					"1": 0.55,
-					"2": 0.45,
-					"3": 1,
-					"4": true
-				}
+				"offset_y": -760
 			},
 			"name": "GraphNode45",
 			"type": "curve_sample_points_constant"
@@ -1200,13 +1422,19 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"0": {
+						"value": 30
+					},
+					"1": {
+						"value": 30
+					},
+					"2": {
+						"value": 360
+					}
+				},
 				"offset_x": 1000,
-				"offset_y": -540,
-				"slots": {
-					"0": 30,
-					"1": 30,
-					"2": 360
-				}
+				"offset_y": -540
 			},
 			"name": "GraphNode51",
 			"type": "value_vector3"
@@ -1214,14 +1442,99 @@
 		{
 			"data": {},
 			"editor": {
+				"inputs": {
+					"1": {
+						"value": true
+					}
+				},
 				"offset_x": 1780,
-				"offset_y": -40,
-				"slots": {
-					"1": true
-				}
+				"offset_y": -40
 			},
 			"name": "GraphNode5",
 			"type": "merge_meshes"
+		},
+		{
+			"data": {},
+			"editor": {
+				"inputs": {
+					"0": {
+						"value": 5
+					},
+					"1": {
+						"value": 1
+					},
+					"2": {
+						"value": "(0, 0, 0)"
+					},
+					"3": {
+						"value": "(0, 0, 0)"
+					}
+				},
+				"offset_x": -3320,
+				"offset_y": -20
+			},
+			"name": "GraphNode17",
+			"type": "curve_generator_polygon"
+		},
+		{
+			"data": {},
+			"editor": {
+				"inputs": {
+					"0": {
+						"value": "Trunk radius"
+					},
+					"1": {
+						"value": 1
+					},
+					"2": {
+						"value": ""
+					}
+				},
+				"offset_x": -3600,
+				"offset_y": -20
+			},
+			"name": "GraphNode20",
+			"type": "inspector_scalar"
+		},
+		{
+			"data": {},
+			"editor": {
+				"inputs": {
+					"0": {
+						"value": 0
+					},
+					"1": {
+						"value": 0
+					},
+					"2": {
+						"value": 1
+					}
+				},
+				"offset_x": -3320,
+				"offset_y": 220
+			},
+			"name": "GraphNode29",
+			"type": "value_vector3"
+		},
+		{
+			"data": {},
+			"editor": {
+				"inputs": {
+					"0": {
+						"value": "Seed"
+					},
+					"1": {
+						"value": 0
+					},
+					"2": {
+						"value": ""
+					}
+				},
+				"offset_x": -3320,
+				"offset_y": 100
+			},
+			"name": "GraphNode19",
+			"type": "inspector_scalar"
 		}
 	]
 }

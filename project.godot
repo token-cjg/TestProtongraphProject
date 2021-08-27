@@ -9,8 +9,13 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Spatial",
+"base": "Reference",
 "class": "ConceptBoxInput",
+"language": "GDScript",
+"path": "res://addons/concept_graph/src/editor/nodes/box_input.gd"
+}, {
+"base": "Spatial",
+"class": "ConceptBoxInput2",
 "language": "GDScript",
 "path": "res://scripts/box_input.gd"
 }, {
@@ -29,7 +34,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/concept_graph/src/core/concept_graph_3d.gd"
 }, {
-"base": "Reference",
+"base": "Path",
 "class": "ConceptGraphCurveInput",
 "language": "GDScript",
 "path": "res://addons/concept_graph/src/editor/nodes/curve_input.gd"
@@ -49,17 +54,17 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/concept_graph/src/common/editor_util.gd"
 }, {
-"base": "Reference",
+"base": "Control",
 "class": "ConceptGraphEditorView",
 "language": "GDScript",
 "path": "res://addons/concept_graph/src/editor/gui/editor_view.gd"
 }, {
-"base": "Reference",
+"base": "Object",
 "class": "ConceptGraphHeightmap",
 "language": "GDScript",
 "path": "res://addons/concept_graph/src/data_structures/heightmap.gd"
 }, {
-"base": "Reference",
+"base": "Node",
 "class": "ConceptGraphInputManager",
 "language": "GDScript",
 "path": "res://addons/concept_graph/src/editor/nodes/input_manager.gd"
@@ -74,17 +79,17 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/concept_graph/src/common/node_util.gd"
 }, {
-"base": "Reference",
+"base": "Object",
 "class": "ConceptGraphNoise",
 "language": "GDScript",
 "path": "res://addons/concept_graph/src/data_structures/noise.gd"
 }, {
-"base": "Reference",
+"base": "ConceptGraphNoise",
 "class": "ConceptGraphNoiseBlend",
 "language": "GDScript",
 "path": "res://addons/concept_graph/src/data_structures/noise_blend.gd"
 }, {
-"base": "Reference",
+"base": "ConceptGraphNoise",
 "class": "ConceptGraphNoiseSimplex",
 "language": "GDScript",
 "path": "res://addons/concept_graph/src/data_structures/noise_simplex.gd"
@@ -94,7 +99,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/concept_graph/src/core/project_settings.gd"
 }, {
-"base": "Reference",
+"base": "",
 "class": "ConceptGraphTemplate",
 "language": "GDScript",
 "path": "res://addons/concept_graph/src/core/template.gd"
@@ -109,12 +114,12 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/concept_graph/src/common/vector_util.gd"
 }, {
-"base": "Reference",
+"base": "GraphNode",
 "class": "ConceptNode",
 "language": "GDScript",
 "path": "res://addons/concept_graph/src/core/concept_node.gd"
 }, {
-"base": "Reference",
+"base": "Node",
 "class": "ConceptNodeLibrary",
 "language": "GDScript",
 "path": "res://addons/concept_graph/src/core/node_library.gd"
@@ -146,6 +151,7 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "ConceptBoxInput": "",
+"ConceptBoxInput2": "",
 "ConceptGraph": "",
 "ConceptGraph2D": "",
 "ConceptGraph3D": "",

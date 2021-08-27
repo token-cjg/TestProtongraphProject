@@ -20,9 +20,13 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.50341, 0 )
 script = ExtResource( 1 )
 template_file = "res://templates/tree.tpgn"
 "Remote Status" = null
-Template/seed = 1
-Template/steps = 4
-Template/displacement = 4
+"Template/sub branches radius" = 0.1
+Template/seed = 0
+"Template/sub branches length" = 1
+Template/rotation = 360
+"Template/branches length" = 3
+"Template/branches radius" = 0.1
+"Template/trunk radius" = 1
 
 [node name="Inputs" type="Spatial" parent="Tree"]
 script = ExtResource( 2 )
@@ -41,9 +45,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.50341, 0 )
 script = ExtResource( 1 )
 template_file = "res://templates/ground_with_grass_1.tpgn"
 "Remote Status" = null
-Template/seed = 1
-Template/steps = 4
-Template/displacement = 4
 
 [node name="Inputs" type="Spatial" parent="Grass"]
 script = ExtResource( 2 )
@@ -52,7 +53,6 @@ script = ExtResource( 2 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.118378, 0, 0.170288 )
 script = ExtResource( 4 )
 size = Vector3( 7.06512, 0.122, 6.25806 )
-center = Vector3( 0, 0, 0 )
 
 [node name="Grass" parent="Grass/Inputs" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25841, -7.82551 )

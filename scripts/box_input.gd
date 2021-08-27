@@ -1,5 +1,5 @@
 tool
-class_name ConceptBoxInput
+class_name ConceptBoxInput2
 extends Spatial
 
 
