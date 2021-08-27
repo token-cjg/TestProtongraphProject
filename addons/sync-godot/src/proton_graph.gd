@@ -153,6 +153,8 @@ func rebuild() -> void:
 	var global_path = ProjectSettings.globalize_path(template_file)
 	var inspector_values = _inspector_util.serialize(self)
 	var inputs = _node_serializer.serialize_all(_inputs.get_children())
+	print("in the rebuild function")
+	print(inputs)
 	_protocol.rebuild(global_path, inspector_values, inputs)
 
 
@@ -184,16 +186,19 @@ func _load_template(path) -> void:
 
 		if not _inspector_util.is_property(node_data["type"]):
 			continue
+			
+		if (not "inputs" in node_data["editor"]) || (not 1 in node_data["editor"]["inputs"]):
+			continue
 
-		var vname = "Template/" + node_data["editor"]["inputs"][0]["value"].to_lower()
-		var vvalue = node_data["editor"]["inputs"][1]["value"]
+		var variableName = "Template/" + node_data["editor"]["inputs"][0]["value"].to_lower()
+		var variableValue = node_data["editor"]["inputs"][1]["value"]
 
-		if not vname in variables:
+		if not variableName in variables:
 			var dict = {
-				"default_value": vvalue,
-				"type": _inspector_util.to_variant_type(vvalue)
+				"default_value": variableValue,
+				"type": _inspector_util.to_variant_type(variableValue)
 			}
-			variables[vname] = dict
+			variables[variableName] = dict
 
 	if graph.has("inspector"):
 		for var_name in graph["inspector"].keys():
