@@ -1,0 +1,65 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://addons/sync-godot/src/proton_graph.gd" type="Script" id=1]
+[ext_resource path="res://addons/sync-godot/src/input_manager.gd" type="Script" id=2]
+[ext_resource path="res://addons/concept_graph/src/editor/nodes/curve_input.gd" type="Script" id=3]
+[ext_resource path="res://addons/concept_graph/src/editor/nodes/box_input.gd" type="Script" id=4]
+[ext_resource path="res://addons/concept_graph/examples/assets/grass/grass52.tscn" type="PackedScene" id=5]
+[ext_resource path="res://addons/concept_graph/examples/assets/leaves/leaves_1.tscn" type="PackedScene" id=6]
+
+[sub_resource type="Curve3D" id=1]
+_data = {
+"points": PoolVector3Array( -0.228951, -4.5795, -0.025105, 0.228951, 4.5795, 0.025105, -0.0334606, -0.0486393, -0.08215, -0.989749, -3.44629, -3.55594, 0.989749, 3.44629, 3.55594, -0.713322, 7.85146, -0.765346 ),
+"tilts": PoolRealArray( 0, 0 )
+}
+
+[node name="TestProtongraph" type="Spatial"]
+
+[node name="Tree" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.50341, 0 )
+script = ExtResource( 1 )
+template_file = "res://templates/tree.tpgn"
+"Remote Status" = null
+"Template/sub branches radius" = 0.1
+Template/seed = 0
+"Template/sub branches length" = 1
+Template/rotation = 360
+"Template/branches length" = 3
+"Template/branches radius" = 0.1
+"Template/trunk radius" = 1
+
+[node name="Inputs" type="Spatial" parent="Tree"]
+script = ExtResource( 2 )
+
+[node name="Path" type="Path" parent="Tree/Inputs"]
+curve = SubResource( 1 )
+script = ExtResource( 3 )
+
+[node name="Leaves" parent="Tree/Inputs" instance=ExtResource( 6 )]
+visible = false
+
+[node name="Outputs" type="Spatial" parent="Tree"]
+
+[node name="Grass" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.50341, 0 )
+script = ExtResource( 1 )
+template_file = "res://templates/ground_with_grass_1.tpgn"
+"Remote Status" = null
+
+[node name="Inputs" type="Spatial" parent="Grass"]
+script = ExtResource( 2 )
+
+[node name="Box" type="Spatial" parent="Grass/Inputs"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.118378, 0, 0.170288 )
+script = ExtResource( 4 )
+size = Vector3( 7.06512, 0.122, 6.25806 )
+
+[node name="Grass" parent="Grass/Inputs" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25841, -7.82551 )
+visible = false
+
+[node name="Outputs" type="Spatial" parent="Grass"]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -4.37114e-08, 0.34202, -0.939693, 0, 0.939693, 0.34202, 1, 1.49502e-08, -4.10753e-08, -19.2975, 10.8164, 0 )
+current = true

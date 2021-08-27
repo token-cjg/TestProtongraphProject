@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/tents/data/tent_smallClosed.glb" type="PackedScene" id=1]
+
+[node name="tent_smallClosed" instance=ExtResource( 1 )]
