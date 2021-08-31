@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://addons/concept_graph/src/editor/nodes/curve_input.gd" type="Script" id=1]
+[ext_resource path="res://addons/sync-godot/src/proton_graph.gd" type="Script" id=2]
+[ext_resource path="res://addons/sync-godot/src/input_manager.gd" type="Script" id=3]
+[ext_resource path="res://assets/leaves/leaves_1.tscn" type="PackedScene" id=4]
+
+[sub_resource type="Curve3D" id=1]
+_data = {
+"points": PoolVector3Array( -0.228951, -4.5795, -0.025105, 0.228951, 4.5795, 0.025105, -0.0334606, -0.0486393, -0.08215, -0.989749, -3.44629, -3.55594, 0.989749, 3.44629, 3.55594, -0.713322, 7.85146, -0.765346 ),
+"tilts": PoolRealArray( 0, 0 )
+}
+
+[node name="Tree" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.50341, 0 )
+script = ExtResource( 2 )
+template_file = "res://templates/tree.tpgn"
+"Remote Status" = null
+"Template/sub branches radius" = 0.1
+Template/seed = 0
+"Template/sub branches length" = 1
+Template/rotation = 360
+"Template/branches length" = 3
+"Template/branches radius" = 0.1
+"Template/trunk radius" = 1
+
+[node name="Inputs" type="Spatial" parent="."]
+script = ExtResource( 3 )
+
+[node name="Path" type="Path" parent="Inputs"]
+curve = SubResource( 1 )
+script = ExtResource( 1 )
+
+[node name="Leaves" type="Spatial" parent="Inputs" instance=ExtResource( 4 )]
+visible = false
+
+[node name="Outputs" type="Spatial" parent="."]

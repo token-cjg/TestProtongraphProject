@@ -154,7 +154,6 @@ func rebuild() -> void:
 	var inspector_values = _inspector_util.serialize(self)
 	var inputs = _node_serializer.serialize_all(_inputs.get_children())
 	print("in the rebuild function")
-	print(inputs)
 	_protocol.rebuild(global_path, inspector_values, inputs)
 
 
@@ -243,6 +242,8 @@ func _on_input_changed(_node) -> void:
 
 
 func _on_build_completed(nodes: Array) -> void:
+	print("in _on_build_completed")
+	print(nodes)
 	if not nodes or nodes.size() == 0:
 		return
 

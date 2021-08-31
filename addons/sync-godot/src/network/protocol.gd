@@ -56,6 +56,8 @@ func _on_connection_etablished() -> void:
 
 
 func _on_data_received(msg: Dictionary) -> void:
+	print("in _on_data_received function")
+	print(msg)
 	if not msg.has("type"):
 		return
 
@@ -66,9 +68,9 @@ func _on_data_received(msg: Dictionary) -> void:
 			print("Unsupported message ", msg["type"])
 
 
-func _on_build_completed(data: Array) -> void:
+func _on_build_completed(data: Dictionary) -> void:
 	var res := []
-	for dict in data:
+	for dict in data["nodes"]:
 		res.append(_node_serializer.deserialize(dict))
 
 	emit_signal("build_completed", res)
