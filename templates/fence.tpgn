@@ -23,11 +23,23 @@
 			"from_port": 0,
 			"to": "remote_sync",
 			"to_port": 0
+		},
+		{
+			"from": "curve_generator_line_mutli",
+			"from_port": 0,
+			"to": "GraphNode3",
+			"to_port": 0
+		},
+		{
+			"from": "remote_input_3d",
+			"from_port": 0,
+			"to": "curve_generator_line_mutli",
+			"to_port": 3
 		}
 	],
 	"editor": {
-		"offset_x": -325.917023,
-		"offset_y": -353.5
+		"offset_x": -1201.898315,
+		"offset_y": -243.287506
 	},
 	"inspector": {},
 	"nodes": [
@@ -110,6 +122,43 @@
 			},
 			"name": "remote_sync",
 			"type": "remote_sync"
+		},
+		{
+			"data": {},
+			"editor": {
+				"inputs": {
+					"0": {
+						"value": 1
+					},
+					"1": {
+						"value": false
+					},
+					"2": {
+						"value": "(0, 0, 0)"
+					}
+				},
+				"offset_x": -680,
+				"offset_y": -160
+			},
+			"name": "curve_generator_line_mutli",
+			"type": "curve_generator_line_mutli"
+		},
+		{
+			"data": {},
+			"editor": {
+				"inputs": {
+					"0": {
+						"value": "Fence"
+					},
+					"1": {
+						"value": false
+					}
+				},
+				"offset_x": -1000,
+				"offset_y": 20
+			},
+			"name": "remote_input_3d",
+			"type": "remote_input_3d"
 		}
 	]
 }
