@@ -15,17 +15,17 @@ func _ready():
 	_start_client()
 
 
-func rebuild(template_path: String, inspector: Array, inputs: Array) -> void:
+func rebuild(template_path: String, inspector: Array, generator_payload: Array) -> void:
 	if not _client.is_connected_to_server():
 		_start_client()
-		_queue.append([template_path, inspector, inputs])
+		_queue.append([template_path, inspector, generator_payload])
 		return
 
 	var msg := {}
 	msg["command"] = "build"
 	msg["path"] = template_path
 	msg["inspector"] = inspector
-	msg["inputs"] = inputs
+	msg["inputs"] = generator_payload
 	_client.send(msg)
 
 

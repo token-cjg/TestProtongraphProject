@@ -38,8 +38,8 @@
 		}
 	],
 	"editor": {
-		"offset_x": -1201.898315,
-		"offset_y": -243.287506
+		"offset_x": -889.200928,
+		"offset_y": -294.02533
 	},
 	"inspector": {},
 	"nodes": [
@@ -138,7 +138,7 @@
 					}
 				},
 				"offset_x": -680,
-				"offset_y": -160
+				"offset_y": -140
 			},
 			"name": "curve_generator_line_mutli",
 			"type": "curve_generator_line_mutli"
@@ -148,7 +148,7 @@
 			"editor": {
 				"inputs": {
 					"0": {
-						"value": "Fence"
+						"value": "Path"
 					},
 					"1": {
 						"value": false
