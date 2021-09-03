@@ -25,21 +25,21 @@
 			"to_port": 0
 		},
 		{
-			"from": "curve_generator_line_mutli",
+			"from": "remote_input_3d2",
 			"from_port": 0,
-			"to": "GraphNode3",
+			"to": "GraphNode5",
 			"to_port": 0
 		},
 		{
-			"from": "remote_input_3d",
+			"from": "remote_input_curve_3d",
 			"from_port": 0,
-			"to": "curve_generator_line_mutli",
-			"to_port": 3
+			"to": "GraphNode3",
+			"to_port": 0
 		}
 	],
 	"editor": {
-		"offset_x": -889.200928,
-		"offset_y": -294.02533
+		"offset_x": -1142.631104,
+		"offset_y": -254.83783
 	},
 	"inspector": {},
 	"nodes": [
@@ -128,20 +128,17 @@
 			"editor": {
 				"inputs": {
 					"0": {
-						"value": 1
+						"value": "fence_planks"
 					},
 					"1": {
 						"value": false
-					},
-					"2": {
-						"value": "(0, 0, 0)"
 					}
 				},
-				"offset_x": -680,
-				"offset_y": -140
+				"offset_x": -380,
+				"offset_y": -240
 			},
-			"name": "curve_generator_line_mutli",
-			"type": "curve_generator_line_mutli"
+			"name": "remote_input_3d2",
+			"type": "remote_input_3d"
 		},
 		{
 			"data": {},
@@ -154,11 +151,11 @@
 						"value": false
 					}
 				},
-				"offset_x": -1000,
-				"offset_y": 20
+				"offset_x": -780,
+				"offset_y": -40
 			},
-			"name": "remote_input_3d",
-			"type": "remote_input_3d"
+			"name": "remote_input_curve_3d",
+			"type": "remote_input_curve_3d"
 		}
 	]
 }
