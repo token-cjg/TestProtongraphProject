@@ -24,7 +24,14 @@ static func serialize(root: Node) -> Dictionary:
 	elif root is Spatial or root is Position3D:
 		res["type"] = "node_3d"
 		res["data"] = _serialize_node_3d(root)
-
+	
+	# This is important in order to render meshes on callback after generation.
+	# See https://confusedgremlin.wordpress.com/?p=7523&preview_id=7523&preview_nonce=8902b878f9&preview=true
+	# Basically, this is passed to protongraph, protongraph appends this attribute to each and every relevant 
+	# node on the generated scenetree, then on callback the Client knows where the original node was and can 
+	# copy the mesh across to the new scenetree within itself.
+	res["node_path_route"] = root.get_path()
+	
 	if root.get_child_count() > 0:
 		res["children"] = []
 		for child in root.get_children():
