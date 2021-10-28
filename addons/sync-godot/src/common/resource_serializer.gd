@@ -1,6 +1,5 @@
 extends Node
 
-var _resource_serializer = preload('./resource_serializer.gd')
 # Helper to serialize and deserialize node trees to json objects.
 
 
@@ -12,22 +11,14 @@ static func serialize(root: Node) -> Dictionary:
 		return res
 
 	res["name"] = root.name
-
-	print("in the serialize function")
-	if root is MeshInstance:
-		res["type"] = "mesh"
-		res["data"] = _serialize_mesh_instance(root)
-		#print("what a mesh")
-		#print(res["data"]["resource_path"]) #res://assets/fences/models/fence_planks.glb::2
-	elif root is MultiMeshInstance:
-		res["type"] = "multi_mesh"
-		res["data"] = _serialize_multi_mesh(root)
-	elif root is Path:
-		res["type"] = "curve_3d"
-		res["data"] = _serialize_curve_3d(root)
-	elif root is Spatial or root is Position3D:
-		res["type"] = "node_3d"
-		res["data"] = _serialize_node_3d(root)
+	
+	# This is important in order to render meshes on callback after generation.
+	# See https://confusedgremlin.wordpress.com/?p=7523
+	# Basically, this is passed to protongraph, protongraph appends this attribute to each and every relevant 
+	# node on the generated scenetree, then on callback the Client knows where the original node was and can 
+	# copy the mesh across to the new scenetree within itself.
+	# (We pass this as nodeName: nodePath so that we can fetch the nodePath by nodeName within Protongraph.)
+	res["node_path_input"] = { root.name: root.get_path() }
 	
 	if root.get_child_count() > 0:
 		res["children"] = []
@@ -128,7 +119,7 @@ static func _deserialize_node_3d(data: Dictionary) -> Position3D:
 
 # -- Mesh --
 
-static func _serialize_mesh_instance(mesh_instance: MeshInstance) -> Array:
+static func _serialize_mesh_instance(mesh_instance: MeshInstance) -> Dictionary:
 	var data = _serialize_node_3d(mesh_instance)
 	data["mesh"] = {}
 	var mesh = mesh_instance.mesh
@@ -138,11 +129,6 @@ static func _serialize_mesh_instance(mesh_instance: MeshInstance) -> Array:
 	else:
 		for i in mesh.get_surface_count():
 			data["mesh"][i] = _format_array(mesh.surface_get_arrays(i))
-
-	# Make sure that we pass a reference to the resource path of the associated mesh resource!
-	if mesh_instance.has_node_and_resource(mesh_instance.get_path()):
-		var resource = mesh_instance.get_node_and_resource(mesh_instance.get_path())[0]
-		data["resource_path"] = resource.mesh.resource_path
 
 	return data
 
@@ -293,19 +279,3 @@ static func _to_pool(array: Array):
 		return PoolVector2Array(tmp)
 
 	return PoolVector3Array(tmp)
-
-# This is an awful solution, but NodePath is missing an important method, so there's no great alternative that I've found.
-# Try me with get_node_property(self, "Control/Spatial/CollisionShape2D:shape:extents:x")
-
-func get_node_property(from: Node, path: NodePath):
-	path = path as NodePath
-	var node_path = get_as_node_path(path)
-	var property_path = (path.get_concatenated_subnames() as NodePath).get_as_property_path()
-	return from.get_node(node_path).get_indexed(property_path)
-
-func get_as_node_path(path: NodePath) -> NodePath:
-	path = path as NodePath
-	var node_path = path as String
-	var property_path = path.get_concatenated_subnames() as String
-	node_path.erase((path as String).length() - property_path.length() - 1, property_path.length() + 1)
-	return node_path as NodePath

@@ -25,11 +25,11 @@ func _ready():
 
 	_retry_timer.connect("timeout", self, "_try_to_connect")
 	_ws.connect("connection_error", self, "_on_connection_error")
-	_ws.connect("connection_established", self, "_on_connection_etablished")
+	_ws.connect("connection_established", self, "_on_connection_established")
 	_ws.connect("connection_closed", self, "_on_connection_closed")
 	_ws.connect("data_received", self, "_on_data_received")
 
-	_port = 434743 # TODO: Get the port from the project settings
+	_port = 4347 # TODO: Get the port from the project settings
 	_url += ":" + String(_port)
 
 
@@ -101,7 +101,7 @@ func _on_connection_error() -> void:
 	_is_connected = false
 
 
-func _on_connection_etablished(protocol: String) -> void:
+func _on_connection_established(protocol: String) -> void:
 	emit_signal("connection_etablished")
 	_is_connected = true
 
