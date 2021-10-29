@@ -2,8 +2,8 @@
 
 [ext_resource path="res://addons/concept_graph/src/core/concept_graph.gd" type="Script" id=1]
 [ext_resource path="res://addons/concept_graph/src/editor/nodes/input_manager.gd" type="Script" id=2]
-[ext_resource path="res://addons/concept_graph/examples/assets/lighting/lighting.tscn" type="PackedScene" id=3]
-[ext_resource path="res://addons/concept_graph/examples/assets/materials/m_grass.tres" type="Material" id=4]
+[ext_resource path="res://assets/lighting/lighting.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/materials/m_grass.tres" type="Material" id=4]
 [ext_resource path="res://addons/concept_graph/src/editor/nodes/box_input.gd" type="Script" id=5]
 
 [sub_resource type="Curve" id=1]

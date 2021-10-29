@@ -152,8 +152,17 @@ func rebuild() -> void:
 		return
 	var global_path = ProjectSettings.globalize_path(template_file)
 	var inspector_values = _inspector_util.serialize(self)
-	var inputs = _node_serializer.serialize_all(_inputs.get_children())
-	_protocol.rebuild(global_path, inspector_values, inputs)
+	var generator_payload = []
+	var serialized_node_data = _node_serializer.serialize_all(_inputs.get_children())
+	print("in proton_graph#rebuild, printing serialized_node_data component names")
+	for datum in serialized_node_data:
+		print(datum.name)
+	generator_payload.append({ 
+		"node": serialized_node_data,
+		"resources": {}
+	})
+	print("in the rebuild function")
+	_protocol.rebuild(global_path, inspector_values, generator_payload)
 
 
 # Load the template file and search for inputs or inspector properties to
@@ -184,16 +193,19 @@ func _load_template(path) -> void:
 
 		if not _inspector_util.is_property(node_data["type"]):
 			continue
+			
+		if (not "inputs" in node_data["editor"]) || (not 1 in node_data["editor"]["inputs"]):
+			continue
 
-		var vname = "Template/" + node_data["editor"]["inputs"][0]["value"].to_lower()
-		var vvalue = node_data["editor"]["inputs"][1]["value"]
+		var variableName = "Template/" + node_data["editor"]["inputs"][0]["value"].to_lower()
+		var variableValue = node_data["editor"]["inputs"][1]["value"]
 
-		if not vname in variables:
+		if not variableName in variables:
 			var dict = {
-				"default_value": vvalue,
-				"type": _inspector_util.to_variant_type(vvalue)
+				"default_value": variableValue,
+				"type": _inspector_util.to_variant_type(variableValue)
 			}
-			variables[vname] = dict
+			variables[variableName] = dict
 
 	if graph.has("inspector"):
 		for var_name in graph["inspector"].keys():
@@ -238,6 +250,8 @@ func _on_input_changed(_node) -> void:
 
 
 func _on_build_completed(nodes: Array) -> void:
+	print("in _on_build_completed")
+	print(nodes)
 	if not nodes or nodes.size() == 0:
 		return
 

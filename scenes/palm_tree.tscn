@@ -2,11 +2,11 @@
 
 [ext_resource path="res://addons/concept_graph/src/core/concept_graph.gd" type="Script" id=1]
 [ext_resource path="res://addons/concept_graph/src/editor/nodes/input_manager.gd" type="Script" id=2]
-[ext_resource path="res://addons/concept_graph/examples/assets/leaves/leaves_2.tscn" type="PackedScene" id=3]
-[ext_resource path="res://addons/concept_graph/examples/assets/lighting/lighting.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/leaves/leaves_2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/lighting/lighting.tscn" type="PackedScene" id=4]
 [ext_resource path="res://addons/concept_graph/src/editor/nodes/curve_input.gd" type="Script" id=5]
-[ext_resource path="res://addons/concept_graph/examples/assets/materials/m_palm_tree.tres" type="Material" id=6]
-[ext_resource path="res://addons/concept_graph/examples/assets/leaves/data/m_leaves_2.tres" type="Material" id=7]
+[ext_resource path="res://assets/materials/m_palm_tree.tres" type="Material" id=6]
+[ext_resource path="res://assets/leaves/data/m_leaves_2.tres" type="Material" id=7]
 
 [sub_resource type="Curve" id=2]
 _data = [ Vector2( 0, 0.609091 ), 0.0, 4.46552, 0, 0, Vector2( 0.157248, 0.990909 ), -0.168182, -0.168182, 0, 0, Vector2( 0.363636, 0.645455 ), -1.35366, -1.35366, 0, 0, Vector2( 0.92629, 0.363636 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), -0.399999, 0.0, 0, 0 ]

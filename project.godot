@@ -9,7 +9,7 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Reference",
+"base": "Spatial",
 "class": "ConceptBoxInput",
 "language": "GDScript",
 "path": "res://addons/concept_graph/src/editor/nodes/box_input.gd"
