@@ -25,21 +25,27 @@
 			"to_port": 0
 		},
 		{
+			"from": "remote_input_curve_3d",
+			"from_port": 0,
+			"to": "GraphNode3",
+			"to_port": 0
+		},
+		{
 			"from": "remote_input_3d2",
 			"from_port": 0,
 			"to": "GraphNode5",
 			"to_port": 0
 		},
 		{
-			"from": "remote_input_curve_3d",
+			"from": "remote_input_3d_reference",
 			"from_port": 0,
-			"to": "GraphNode3",
+			"to": "remote_post",
 			"to_port": 0
 		}
 	],
 	"editor": {
-		"offset_x": -763.260864,
-		"offset_y": -276.25
+		"offset_x": -216.769852,
+		"offset_y": -461.5
 	},
 	"inspector": {},
 	"nodes": [
@@ -128,23 +134,6 @@
 			"editor": {
 				"inputs": {
 					"0": {
-						"value": "fence_planks"
-					},
-					"1": {
-						"value": false
-					}
-				},
-				"offset_x": -380,
-				"offset_y": -240
-			},
-			"name": "remote_input_3d2",
-			"type": "remote_input_3d"
-		},
-		{
-			"data": {},
-			"editor": {
-				"inputs": {
-					"0": {
 						"value": "Path"
 					},
 					"1": {
@@ -156,6 +145,50 @@
 			},
 			"name": "remote_input_curve_3d",
 			"type": "remote_input_curve_3d"
+		},
+		{
+			"data": {},
+			"editor": {
+				"inputs": {},
+				"offset_x": 420,
+				"offset_y": -320
+			},
+			"name": "remote_post",
+			"type": "remote_post"
+		},
+		{
+			"data": {},
+			"editor": {
+				"inputs": {
+					"0": {
+						"value": "fence_planks"
+					},
+					"1": {
+						"value": false
+					}
+				},
+				"offset_x": 100,
+				"offset_y": -420
+			},
+			"name": "remote_input_3d_reference",
+			"type": "remote_input_3d_reference"
+		},
+		{
+			"data": {},
+			"editor": {
+				"inputs": {
+					"0": {
+						"value": "fence_planks"
+					},
+					"1": {
+						"value": false
+					}
+				},
+				"offset_x": -200,
+				"offset_y": -240
+			},
+			"name": "remote_input_3d2",
+			"type": "remote_input_3d"
 		}
 	]
 }
