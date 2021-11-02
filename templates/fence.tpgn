@@ -19,12 +19,6 @@
 			"to_port": 1
 		},
 		{
-			"from": "GraphNode5",
-			"from_port": 0,
-			"to": "remote_sync",
-			"to_port": 0
-		},
-		{
 			"from": "remote_input_curve_3d",
 			"from_port": 0,
 			"to": "GraphNode3",
@@ -39,13 +33,19 @@
 		{
 			"from": "remote_input_3d_reference",
 			"from_port": 0,
-			"to": "remote_post",
+			"to": "remote_sync_and_post",
 			"to_port": 0
+		},
+		{
+			"from": "GraphNode5",
+			"from_port": 0,
+			"to": "remote_sync_and_post",
+			"to_port": 1
 		}
 	],
 	"editor": {
-		"offset_x": -216.769852,
-		"offset_y": -461.5
+		"offset_x": -676.35968,
+		"offset_y": -447.364838
 	},
 	"inspector": {},
 	"nodes": [
@@ -84,23 +84,6 @@
 			"editor": {
 				"inputs": {
 					"1": {
-						"value": "(0, 0, 0)"
-					},
-					"2": {
-						"value": true
-					}
-				},
-				"offset_x": -120,
-				"offset_y": -60
-			},
-			"name": "GraphNode6",
-			"type": "rotate_transforms_offset"
-		},
-		{
-			"data": {},
-			"editor": {
-				"inputs": {
-					"1": {
 						"value": 1.086
 					},
 					"2": {
@@ -122,16 +105,6 @@
 		{
 			"data": {},
 			"editor": {
-				"inputs": {},
-				"offset_x": 400,
-				"offset_y": -140
-			},
-			"name": "remote_sync",
-			"type": "remote_sync"
-		},
-		{
-			"data": {},
-			"editor": {
 				"inputs": {
 					"0": {
 						"value": "Path"
@@ -145,16 +118,6 @@
 			},
 			"name": "remote_input_curve_3d",
 			"type": "remote_input_curve_3d"
-		},
-		{
-			"data": {},
-			"editor": {
-				"inputs": {},
-				"offset_x": 420,
-				"offset_y": -320
-			},
-			"name": "remote_post",
-			"type": "remote_post"
 		},
 		{
 			"data": {},
@@ -189,6 +152,33 @@
 			},
 			"name": "remote_input_3d2",
 			"type": "remote_input_3d"
+		},
+		{
+			"data": {},
+			"editor": {
+				"inputs": {},
+				"offset_x": 580,
+				"offset_y": -220
+			},
+			"name": "remote_sync_and_post",
+			"type": "remote_sync_and_post"
+		},
+		{
+			"data": {},
+			"editor": {
+				"inputs": {
+					"1": {
+						"value": "(0, 0, 0)"
+					},
+					"2": {
+						"value": true
+					}
+				},
+				"offset_x": -120,
+				"offset_y": -80
+			},
+			"name": "GraphNode6",
+			"type": "rotate_transforms_offset"
 		}
 	]
 }
