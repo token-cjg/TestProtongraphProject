@@ -142,7 +142,7 @@ static func _serialize_mesh_instance(mesh_instance: MeshInstance) -> Array:
 	# Make sure that we pass a reference to the resource path of the associated mesh resource!
 	if mesh_instance.has_node_and_resource(mesh_instance.get_path()):
 		var resource = mesh_instance.get_node_and_resource(mesh_instance.get_path())[0]
-		data["resource_path"] = resource.mesh.resource_path
+		data["resource_path"] = str(resource.mesh.resource_path).split('::')[0]
 
 	return data
 
