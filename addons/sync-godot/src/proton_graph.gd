@@ -154,14 +154,15 @@ func rebuild() -> void:
 	var inspector_values = _inspector_util.serialize(self)
 	var generator_payload = []
 	var serialized_node_data = _node_serializer.serialize_all(_inputs.get_children())
-	print("in proton_graph#rebuild, printing serialized_node_data component names")
+	#print("in proton_graph#rebuild, printing serialized_node_data component names")
 	for datum in serialized_node_data:
-		print(datum.name)
+		pass
+	#print(datum.name)
 	generator_payload.append({ 
 		"node": serialized_node_data,
 		"resources": {}
 	})
-	print("in the rebuild function")
+	#print("in the rebuild function")
 	_protocol.rebuild(global_path, inspector_values, generator_payload)
 
 
