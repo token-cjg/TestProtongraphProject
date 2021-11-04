@@ -13,7 +13,7 @@ static func serialize(root: Node) -> Dictionary:
 
 	res["name"] = root.name
 
-	print("in the serialize function")
+	#print("in the serialize function")
 	if root is MeshInstance:
 		res["type"] = "mesh"
 		res["data"] = _serialize_mesh_instance(root)
@@ -41,6 +41,8 @@ static func serialize(root: Node) -> Dictionary:
 # the inverse of serialize.
 static func deserialize(data: Dictionary) -> Node:
 	var res
+	print("in the deserialize function")
+	print(data)
 	match data["type"]:
 		"node_3d":
 			res = _deserialize_node_3d(data["data"])

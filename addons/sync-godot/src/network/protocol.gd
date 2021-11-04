@@ -57,7 +57,7 @@ func _on_connection_etablished() -> void:
 
 func _on_data_received(msg: Dictionary) -> void:
 	print("in _on_data_received function")
-	# print(msg)
+	print(msg)
 	if not msg.has("type"):
 		return
 

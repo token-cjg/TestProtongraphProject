@@ -25,7 +25,7 @@ static func to_variant_type(value):
 
 
 static func serialize(node) -> Array:
-	print("In serialize")
+	#print("In serialize")
 	var res = []
 	for vname in node._exposed_variables.keys():
 		var d = {}
@@ -35,5 +35,5 @@ static func serialize(node) -> Array:
 		else:
 			d["value"] = node._exposed_variables[vname]["default_value"]
 		res.append(d)
-	print("Res ", res)
+	#print("Res ", res)
 	return res
