@@ -41,8 +41,8 @@ static func serialize(root: Node) -> Dictionary:
 # the inverse of serialize.
 static func deserialize(data: Dictionary) -> Node:
 	var res
-	print("in the deserialize function")
-	print(data)
+	#print("in the deserialize function")
+	#print(data)
 	match data["type"]:
 		"node_3d":
 			res = _deserialize_node_3d(data["data"])
