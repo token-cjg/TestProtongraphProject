@@ -57,7 +57,7 @@ func _on_connection_etablished() -> void:
 
 func _on_data_received(msg: Dictionary) -> void:
 	print("in _on_data_received function")
-	print(msg)
+	print(msg["data"]["resource_references"])
 	if not msg.has("type"):
 		return
 
@@ -70,8 +70,9 @@ func _on_data_received(msg: Dictionary) -> void:
 
 func _on_build_completed(data: Dictionary) -> void:
 	var res := []
+	var resource_references = data["resource_references"]
 	for dict in data["nodes"]:
-		res.append(_node_serializer.deserialize(dict))
+		res.append(_node_serializer.deserialize(dict, resource_references, []))
 
 	emit_signal("build_completed", res)
 

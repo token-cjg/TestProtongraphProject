@@ -39,7 +39,7 @@ static func serialize(root: Node) -> Dictionary:
 
 # Takes a dictionnary and recreates the Godot node tree from there. This is
 # the inverse of serialize.
-static func deserialize(data: Dictionary) -> Node:
+static func deserialize(data: Dictionary, resource_references: Array, child_transversal: Array) -> Node:
 	var res
 	#print("in the deserialize function")
 	#print(data)
@@ -47,9 +47,9 @@ static func deserialize(data: Dictionary) -> Node:
 		"node_3d":
 			res = _deserialize_node_3d(data["data"])
 		"mesh":
-			res = _deserialize_mesh_instance(data["data"])
+			res = _deserialize_mesh_instance(data["data"], resource_references, child_transversal)
 		"multi_mesh":
-			res = _deserialize_multi_mesh(data["data"])
+			res = _deserialize_multi_mesh(data["data"], resource_references, child_transversal)
 		"curve_3d":
 			res = _deserialize_curve_3d(data["data"])
 		_:
@@ -58,7 +58,9 @@ static func deserialize(data: Dictionary) -> Node:
 
 	if data.has("children"):
 		for child in data["children"]:
-			res.add_child(deserialize(child))
+			var child_name = child.name as String
+			child_transversal.append(child_name)
+			res.add_child(deserialize(child, resource_references, child_transversal))
 
 	if "name" in data:
 		res.name = data["name"]
@@ -73,10 +75,10 @@ static func serialize_all(nodes: Array) -> Array:
 	return res
 
 
-static func deserialize_all(nodes: Array) -> Array:
+static func deserialize_all(nodes: Array, resource_references: Array) -> Array:
 	var res = []
 	for node in nodes:
-		res.push_back(deserialize(node))
+		res.push_back(deserialize(node, resource_references, []))
 	return res
 
 
@@ -144,29 +146,19 @@ static func _serialize_mesh_instance(mesh_instance: MeshInstance) -> Array:
 	# Make sure that we pass a reference to the resource path of the associated mesh resource!
 	if mesh_instance.has_node_and_resource(mesh_instance.get_path()):
 		var resource = mesh_instance.get_node_and_resource(mesh_instance.get_path())[0]
-		data["resource_path"] = str(resource.mesh.resource_path).split('::')[0]
+		data["resource_path"] = str(resource.mesh.resource_path)
 
 	return data
 
 
-static func _deserialize_mesh_instance(data: Dictionary) -> MeshInstance:
+static func _deserialize_mesh_instance(data: Dictionary, resource_references: Array, child_transversal: Array) -> MeshInstance:
+	print("in node_serializer#_deserialize_mesh_instance")
+	print(resource_references)
 	var mi = MeshInstance.new()
 	mi.transform = _deserialize_transform(data)
 
-	var mesh = ArrayMesh.new()
-	for i in data["mesh"].keys():
-		var source = data["mesh"][i]
-		var surface_arrays = []
-		surface_arrays.resize(Mesh.ARRAY_MAX)
-		surface_arrays[Mesh.ARRAY_VERTEX] = _to_pool(source[Mesh.ARRAY_VERTEX])
-		surface_arrays[Mesh.ARRAY_NORMAL] = _to_pool(source[Mesh.ARRAY_NORMAL])
-		surface_arrays[Mesh.ARRAY_TEX_UV] = _to_pool(source[Mesh.ARRAY_TEX_UV])
-
-		if source[Mesh.ARRAY_INDEX]:
-			surface_arrays[Mesh.ARRAY_INDEX] = PoolIntArray(source[Mesh.ARRAY_INDEX])
-
-		mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES, surface_arrays)
-
+	var mesh = load(resource_references[0]["remote_resource_path"])
+	print(mesh)
 	mi.mesh = mesh
 	return mi
 
@@ -191,12 +183,12 @@ static func _serialize_multi_mesh(mmi: MultiMeshInstance) -> Dictionary:
 	return data
 
 
-static func _deserialize_multi_mesh(data: Dictionary) -> Dictionary:
+static func _deserialize_multi_mesh(data: Dictionary, resource_references: Array, child_transversal: Array) -> Dictionary:
 	var count = data["count"]
 
 	var multimesh := MultiMesh.new()
 	multimesh.instance_count = 0 # Set this to zero or you can't change the other values
-	multimesh.mesh = _deserialize_mesh_instance(data["mesh"]).mesh
+	multimesh.mesh = _deserialize_mesh_instance(data["mesh"], resource_references, child_transversal).mesh
 	multimesh.transform_format = 1
 	multimesh.instance_count = count
 
