@@ -69,6 +69,7 @@ static func deserialize(data: Dictionary, resource_references: Array, child_tran
 
 
 static func serialize_all(nodes: Array) -> Array:
+	print("in the serialize all function")
 	var res = []
 	for node in nodes:
 		res.push_back(serialize(node))
