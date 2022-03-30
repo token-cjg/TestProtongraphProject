@@ -164,7 +164,7 @@ func rebuild() -> void:
 		"node": serialized_node_data,
 		"resources": serialized_resource_data
 	})
-	print("in the rebuild function")
+	# print("in the rebuild function")
 	#print(generator_payload)
 	_protocol.rebuild(global_path, inspector_values, generator_payload)
 
