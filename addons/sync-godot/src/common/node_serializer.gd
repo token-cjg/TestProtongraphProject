@@ -12,6 +12,14 @@ static func serialize(root: Node) -> Dictionary:
 		return res
 
 	res["name"] = root.name
+	
+	# This is important in order to render meshes on callback after generation.
+	# See https://confusedgremlin.wordpress.com/?p=7523
+	# Basically, this is passed to protongraph, protongraph appends this attribute to each and every relevant 
+	# node on the generated scenetree, then on callback the Client knows where the original node was and can 
+	# copy the mesh across to the new scenetree within itself.
+	# (We pass this as nodeName: nodePath so that we can fetch the nodePath by nodeName within Protongraph.)
+	res["node_path_input"] = { root.name: root.get_path() }
 
 	#print("in the serialize function")
 	if root is MeshInstance:
