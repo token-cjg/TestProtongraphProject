@@ -17,6 +17,7 @@ var _protocol
 var _protocol_script = preload("network/protocol.gd")
 var _input_manager_script = preload("input_manager.gd")
 var _node_serializer = preload('common/node_serializer.gd')
+var _resource_serializer = preload('common/resource_serializer.gd')
 var _dict_util = preload('common/dict_util.gd')
 var _inspector_util = preload('common/inspector_util.gd')
 
@@ -154,15 +155,17 @@ func rebuild() -> void:
 	var inspector_values = _inspector_util.serialize(self)
 	var generator_payload = []
 	var serialized_node_data = _node_serializer.serialize_all(_inputs.get_children())
-	#print("in proton_graph#rebuild, printing serialized_node_data component names")
+	var serialized_resource_data = _resource_serializer.serialize_all(_inputs.get_children())
+	print("in proton_graph#rebuild, printing serialized_node_data component names")
 	for datum in serialized_node_data:
 		pass
 	#print(datum.name)
 	generator_payload.append({ 
 		"node": serialized_node_data,
-		"resources": {}
+		"resources": serialized_resource_data
 	})
-	#print("in the rebuild function")
+	# print("in the rebuild function")
+	#print(generator_payload)
 	_protocol.rebuild(global_path, inspector_values, generator_payload)
 
 

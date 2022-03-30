@@ -6,6 +6,7 @@ extends Node
 # Takes a single node and serialize its contents and its children's content
 # into a dictionary
 static func serialize(root: Node) -> Dictionary:
+	# print('in the serialize function')
 	var res := {}
 	if not root:
 		return res
@@ -24,7 +25,8 @@ static func serialize(root: Node) -> Dictionary:
 		res["children"] = []
 		for child in root.get_children():
 			res["children"].append(serialize(child))
-
+	# print("in the serialize function")
+	# print(res)
 	return res
 
 
@@ -56,6 +58,7 @@ static func deserialize(data: Dictionary) -> Node:
 
 
 static func serialize_all(nodes: Array) -> Array:
+	# print("in the serialize_all function")
 	var res = []
 	for node in nodes:
 		res.push_back(serialize(node))
