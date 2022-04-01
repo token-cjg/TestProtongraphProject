@@ -16,6 +16,9 @@ func _ready():
 
 
 func rebuild(template_path: String, inspector: Array, generator_payload: Array) -> void:
+	var file = File.new()
+	file.open(template_path, File.READ)
+	var template_content = file.get_as_text()
 	if not _client.is_connected_to_server():
 		_start_client()
 		_queue.append([template_path, inspector, generator_payload])
@@ -23,7 +26,7 @@ func rebuild(template_path: String, inspector: Array, generator_payload: Array) 
 
 	var msg := {}
 	msg["command"] = "build"
-	msg["path"] = template_path
+	msg["tpgn"] = template_content
 	msg["inspector"] = inspector
 	msg["inputs"] = generator_payload
 	_client.send(msg)
