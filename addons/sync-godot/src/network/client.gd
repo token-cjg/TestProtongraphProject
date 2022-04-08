@@ -64,10 +64,10 @@ func send(data: Dictionary) -> void:
 		for chunk_id in total_chunks:
 			var chunk = msg.substr(chunk_id * chunk_size, chunk_size)
 			var packet = {
-				0: id,
-				1: chunk_id,
-				2: total_chunks,
-				3: chunk
+				"packetId": id,
+				"chunkId": chunk_id,
+				"totalChunks": total_chunks,
+				"chunk": chunk
 			}
 			packet = JSON.print(packet).to_utf8()
 			#print("Sending packet: ", packet.size() / 1024.0, "kb")
